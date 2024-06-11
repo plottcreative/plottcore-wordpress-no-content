@@ -8,7 +8,7 @@
       "php": ">= 7.0.0"
     },
     "provide": {
-      "wordpress/core-implementation": "latest"
+      "wordpress/core-implementation": "^5.0.0"
     },
     "suggest": {
       "ext-curl": "Performs remote request operations.",
