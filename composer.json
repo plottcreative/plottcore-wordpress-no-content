@@ -5,10 +5,10 @@
     "url": "https://wordpress.org/latest.zip"
   },
   "require": {
-    "php": ">=7.0.0"
+    "php": ">=8.1.0"
   },
   "provide": {
-    "wordpress/core-implementation": "dev-stable"
+    "wordpress/core-implementation": "*"
   },
   "suggest": {
     "ext-curl": "Performs remote request operations.",
