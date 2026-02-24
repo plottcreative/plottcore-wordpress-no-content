@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    name: Validate Package
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          tools: composer:v2
+
+      - name: Validate composer.json
+        run: composer validate --strict
+
+      - name: Verify dist URL is reachable
+        run: |
+          DIST_URL=$(php -r "echo json_decode(file_get_contents('composer.json'))->dist->url;")
+          echo "Checking dist URL: $DIST_URL"
+          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" -L "$DIST_URL")
+          echo "HTTP status: $HTTP_STATUS"
+          if [ "$HTTP_STATUS" -ne 200 ]; then
+            echo "::error::WordPress dist URL returned HTTP $HTTP_STATUS"
+            exit 1
+          fi
+          echo "✓ Dist URL is reachable"
