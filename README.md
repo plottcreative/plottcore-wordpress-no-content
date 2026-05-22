@@ -1,2 +1,2 @@
 # Wordpress (No Content)
-![Static Badge](https://img.shields.io/badge/Wordpress-6.9.1-blue)
+![Static Badge](https://img.shields.io/badge/Wordpress-7.0-blue)
