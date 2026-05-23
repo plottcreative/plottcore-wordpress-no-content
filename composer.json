@@ -1,5 +1,5 @@
 {
-    "name": "roots/wordpress-no-content",
+    "name": "plott/plottcore-wordpress-no-content",
     "dist": {
         "type": "zip",
         "url": "https://wordpress.org/latest.zip"
