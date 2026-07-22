@@ -2,7 +2,9 @@
     "name": "plott/plottcore-wordpress-no-content",
     "dist": {
         "type": "zip",
-        "url": "https://wordpress.org/wordpress-7.0.2-no-content.zip"
+        "url": "https://wordpress.org/wordpress-7.0.2-no-content.zip",
+        "reference": "v7.0.3",
+        "shasum": ""
     },
     "require": {
         "php": ">=8.1.0"
