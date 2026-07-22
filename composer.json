@@ -4,7 +4,7 @@
         "type": "zip",
         "url": "https://wordpress.org/wordpress-7.0.2-no-content.zip",
         "reference": "v7.0.3",
-        "shasum": ""
+        "shasum": "52d2ca801cbfd75d1f2716d057095323b6ca424a"
     },
     "require": {
         "php": ">=8.1.0"
